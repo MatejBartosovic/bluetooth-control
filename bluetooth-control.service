@@ -1,0 +1,12 @@
+[Unit]
+Description="Bluetooth controll web server"
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/usr/share/webapp/bluetooth-control
+ExecStart=/usr/share/webapp/bluetooth-control/run.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
